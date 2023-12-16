@@ -43,4 +43,8 @@ function displayComments(res){
     res.write('<li>');
     res.write('<strong>' + comment.username + '</strong> - ');
     res.write('<em>' + comment.email + '</em> - ');
-    res.write('<span>' + comment.comment + '</span>');
+    res.write('<span>' + comment.comment + '</span>');    res.write('</li>'); // Added closing parenthesis
+  });
+  res.write('</ul>');
+  res.end();
+}
